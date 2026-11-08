@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:WAWALauncher.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="WAWALauncher.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="WAWALauncher">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid Name="Main" ShowGridLines="True" Margin="5 5 5 5">
+        <Grid.RowDefinitions>
+			<RowDefinition Height="50" MaxHeight="50" />
+            <RowDefinition Height="*" MinHeight="200" />
+            <RowDefinition Height="25" MaxHeight="25" />
+        </Grid.RowDefinitions>
+        
+        <Grid Name="Content" Grid.Row="1" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0">
+                <TextBlock>Nickname</TextBlock>
+                <TextBox></TextBox>
+                <Button>Play</Button>
+                
+            </StackPanel>
+        </Grid>
+
+    <ProgressBar Background="White" BorderBrush="Blue" BorderThickness="0.3" Grid.Row="2"></ProgressBar>
+    </Grid>
+
+</Window>

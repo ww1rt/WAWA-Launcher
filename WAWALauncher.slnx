@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WAWALauncher.Services/WAWALauncher.Services.csproj" />
+  <Project Path="WAWALauncher/WAWALauncher.csproj" />
+</Solution>
