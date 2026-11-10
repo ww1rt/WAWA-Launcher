@@ -46,4 +46,19 @@ namespace WAWALauncher.Services.Models
         /// </summary>
         public string ProfileId { get; set; }
     }
+
+    /*
+     
+        {
+            "Name": null,
+            "CoreVersion": null,
+            "CoreURL": null,
+            "ModpackVersion": null,
+            "ModpackURL": null,
+            "ResourcesVersion": null,
+            "ResourcesURL": null,
+            "ProfileId": null
+        }
+
+     */
 }
