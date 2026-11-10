@@ -5,7 +5,11 @@ namespace WAWALauncher.Services
 {
     public class LauncherService
     {
-        
+        private string launchCommand = "LAUNCHING COMMAND";
+        public async Task LaunchGame(string gameParams)
+        {
+            Console.WriteLine($"Game launched. Command: {launchCommand}");
+        }
         
         private string GenerateOfflineUUID(string nickname)
         {
