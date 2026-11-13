@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WAWALauncher.Services;
 using WAWALauncher.ViewModels;
 
 namespace WAWALauncher.Extensions
@@ -15,7 +16,7 @@ namespace WAWALauncher.Extensions
 
         public static void AddServices(this IServiceCollection services)
         {
-
+            services.AddTransient<ILauncherService, LauncherService>();
         }
     }
 }

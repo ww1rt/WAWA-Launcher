@@ -31,8 +31,11 @@
             <StackPanel Grid.Column="0">
                 <TextBlock>Nickname</TextBlock>
                 <TextBox></TextBox>
-                <Button>Play</Button>
+                <Button IsEnabled="{Binding !IsLaunching}" Command="{Binding PlayCommand}">Play</Button>
                 
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+			<TextBlock Text="{Binding StatusText}"></TextBlock>	
             </StackPanel>
         </Grid>
 

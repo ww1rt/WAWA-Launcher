@@ -3,7 +3,7 @@ using System.Text;
 
 namespace WAWALauncher.Services
 {
-    public class LauncherService
+    public class LauncherService : ILauncherService
     {
         private string launchCommand = "LAUNCHING COMMAND";
         public async Task LaunchGame(string gameParams)
