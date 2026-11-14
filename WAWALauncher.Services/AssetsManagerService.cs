@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WAWALauncher.Infrastructure;
 
 namespace WAWALauncher.Services
 {
@@ -60,7 +61,7 @@ namespace WAWALauncher.Services
         }
         public async Task GetVersionsInformation()
         {
-            
+            //await Download(CommonConstants.AssemblyVersionsUrl)
         }
         public Task DownloadAssets()
         {
