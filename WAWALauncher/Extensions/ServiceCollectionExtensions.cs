@@ -17,6 +17,7 @@ namespace WAWALauncher.Extensions
         public static void AddServices(this IServiceCollection services)
         {
             services.AddTransient<ILauncherService, LauncherService>();
+            services.AddTransient<IAssetsManagerService, AssetsManagerService>();
         }
     }
 }

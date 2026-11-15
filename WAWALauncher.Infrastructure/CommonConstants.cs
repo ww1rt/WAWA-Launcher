@@ -4,8 +4,8 @@
     {
         public const string AssemblyVersionsUrl = "https://github.com/ww1rt/LAU/releases/download/latest/Assembly.json";
 
-        public static string AssemblyVersionsFilePath { get =>  Path.Combine(GetAppDataPath(), "assembly.json"); } 
-
+        public static string LauncherSpecialFilesPath { get =>  Path.Combine(GetAppDataPath()); }
+        public const string AssemblyVersionsFilename = "assembly.json"; 
         private static string GetAppDataPath()
         {
             string baseFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);

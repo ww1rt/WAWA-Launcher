@@ -10,4 +10,8 @@
     <PackageReference Include="Downloader" Version="7.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WAWALauncher.Infrastructure\WAWALauncher.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

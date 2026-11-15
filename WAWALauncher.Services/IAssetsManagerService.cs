@@ -8,5 +8,7 @@ namespace WAWALauncher.Services
     {
         public Task DownloadAssets();
         public Task UnpackAssets();
+
+        public Task GetVersionsInformation(CancellationToken ct);
     }
 }

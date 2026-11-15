@@ -8,6 +8,7 @@ namespace WAWALauncher.Services
 {
     public class AssetsManagerService : IAssetsManagerService
     {
+        private IProgress<double> progress = new Progress<double>();
         private DownloadConfiguration CreateConfiguration(int chunkCount = 8, int maxTryAgainOnFailure = 3)
         {
             var downloadConfig = new DownloadConfiguration
@@ -39,7 +40,7 @@ namespace WAWALauncher.Services
             try
             {
                 using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-                await downloader.StartAsync(cts.Token);
+                 await downloader.StartAsync(cts.Token);
 
                 if (downloader.Package.Status == DownloadStatus.Failed)
                 {
@@ -59,9 +60,9 @@ namespace WAWALauncher.Services
                     progress?.Report(0); };
             }
         }
-        public async Task GetVersionsInformation()
+        public async Task GetVersionsInformation(CancellationToken ct)
         {
-            //await Download(CommonConstants.AssemblyVersionsUrl)
+            await Download(CommonConstants.AssemblyVersionsUrl, CommonConstants.LauncherSpecialFilesPath, CommonConstants.AssemblyVersionsFilename, CreateConfiguration(), progress, ct);
         }
         public Task DownloadAssets()
         {
