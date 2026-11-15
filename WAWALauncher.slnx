@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="WAWALauncher.Infrastructure/WAWALauncher.Infrastructure.csproj" Id="63c7bb25-9a85-40bc-b3e9-9317551bd7c4" />
   <Project Path="WAWALauncher.Services/WAWALauncher.Services.csproj" />
   <Project Path="WAWALauncher/WAWALauncher.csproj" />
 </Solution>
